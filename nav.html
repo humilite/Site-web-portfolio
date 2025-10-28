@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Support IT</title>
+  </head>
+  <body>
+    <!-- Barre de navigation -->
+    <nav class="bg-sky-600 h-14 relative">
+        <div class="max-w-7xl mx-auto h-full flex items-center justify-between px-6">
+            <!-- Logo et titre -->
+            <div class="flex items-center h-full">
+                <div class="h-14 w-14 rounded-full bg-gray-300 overflow-hidden">
+                    <img src="images/_EPE2245.jpg" alt="Logo Support Technique" class="w-full h-full object-cover">
+                </div>
+                <!-- Titre logo -->
+                <div class="ml-3 flex flex-col items-start">
+                    <span class="text-white font-bold text-base leading-tight">Support</span>
+                    <span class="text-white font-bold text-base leading-tight">Technique</span>
+                </div>
+            </div>
+
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex items-center space-x-6 mr-30">
+                <a href="#" class="text-white hover:text-gray-200 transition duration-300 font-medium py-2">Accueil</a>
+                <a href="#" class="text-white hover:text-gray-200 transition duration-300 font-medium py-2">À propos</a>
+                <a href="#" class="text-white hover:text-gray-200 transition duration-300 font-medium py-2">Expérience</a>
+                <a href="#" class="text-white hover:text-gray-200 transition duration-300 font-medium py-2">Compétences</a>
+                <a href="#" class="text-white hover:text-gray-200 transition duration-300 font-medium py-2">Portfolio</a>
+                <a href="#" class="text-white hover:text-gray-200 transition duration-300 font-medium py-2">Contact</a>
+            </div>
+
+            <!-- Bouton Menu mobile -->
+            <div class="md:hidden mr-4">
+                <button id="mobile-menu-button" class="text-white">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile (caché par défaut) -->
+        <div id="mobile-menu" class="md:hidden hidden absolute top-14 left-0 w-full bg-sky-700 shadow-lg">
+            <div class="flex flex-col py-4">
+                <a href="#" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6">Accueil</a>
+                <a href="#" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6">À propos</a>
+                <a href="#" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6">Expérience</a>
+                <a href="#" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6">Compétences</a>
+                <a href="#" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6">Portfolio</a>
+                <a href="#" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            mobileMenuButton.addEventListener('click', function() {
+                // Basculer l'affichage du menu mobile
+                mobileMenu.classList.toggle('hidden');
+                
+                // Basculer les icônes menu/fermer
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+
+            // Fermer le menu si on clique en dehors
+            document.addEventListener('click', function(event) {
+                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            });
+
+            // Fermer le menu quand on clique sur un lien
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+  </body>
+</html>
