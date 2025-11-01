@@ -37,6 +37,40 @@
         .progress-bar {
             transition: width 2s ease-in-out;
         }
+
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .skill-category {
+            transition: all 0.3s ease;
+        }
+
+        .skill-category.hidden {
+            display: none;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .skill-category.visible {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .expertise-level {
+            transition: all 0.3s ease;
+        }
+
+        .expertise-level:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -120,14 +154,44 @@
                 </div>
             </section>
 
+            <!-- Section Filtres -->
+            <section class="mb-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-4">Filtrer par catégorie :</h3>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <button class="filter-btn active bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition duration-300" data-filter="all">
+                            Toutes les compétences
+                        </button>
+                        <button class="filter-btn bg-purple-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-purple-600 transition duration-300" data-filter="banque">
+                            Systèmes Bancaires
+                        </button>
+                        <button class="filter-btn bg-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600 transition duration-300" data-filter="support">
+                            Support IT
+                        </button>
+                        <button class="filter-btn bg-green-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-600 transition duration-300" data-filter="frontend">
+                            Front-End
+                        </button>
+                        <button class="filter-btn bg-red-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-red-600 transition duration-300" data-filter="backend">
+                            Back-End & BD
+                        </button>
+                        <button class="filter-btn bg-orange-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-orange-600 transition duration-300" data-filter="infrastructure">
+                            Infrastructure
+                        </button>
+                        <button class="filter-btn bg-indigo-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-600 transition duration-300" data-filter="outils">
+                            Outils & Méthodes
+                        </button>
+                    </div>
+                </div>
+            </section>
+
             <!-- Section Compétences par catégorie -->
             <section class="mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Domaines d'Expertise</h2>
                 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="skills-container">
                     
                     <!-- Systèmes Bancaires -->
-                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 skill-card">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 skill-card skill-category visible" data-category="banque">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
                                 <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,7 +218,7 @@
                     </div>
                     
                     <!-- Support & Gestion IT -->
-                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 skill-card">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 skill-card skill-category visible" data-category="support">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
                                 <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -181,7 +245,7 @@
                     </div>
                     
                     <!-- Développement Front-End -->
-                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 skill-card">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 skill-card skill-category visible" data-category="frontend">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
                                 <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -211,7 +275,7 @@
                     </div>
                     
                     <!-- Développement Back-End & Bases de Données -->
-                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 skill-card">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 skill-card skill-category visible" data-category="backend">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
                                 <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -244,7 +308,7 @@
                     </div>
                     
                     <!-- Infrastructure & Réseaux -->
-                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 skill-card">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 skill-card skill-category visible" data-category="infrastructure">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
                                 <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -271,7 +335,7 @@
                     </div>
                     
                     <!-- Outils & Méthodologies -->
-                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 skill-card">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 skill-card skill-category visible" data-category="outils">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
                                 <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -297,6 +361,148 @@
                             </div>
                             <div class="bg-indigo-50 rounded-lg p-4 text-center">
                                 <p class="font-semibold text-indigo-700">Git, GitHub</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Légende des niveaux d'expertise -->
+            <section class="mb-16">
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Échelle des Niveaux d'Expertise</h2>
+                    <p class="text-lg text-gray-600 text-center mb-8 max-w-3xl mx-auto">
+                        Comprenez la signification de chaque niveau de maîtrise pour mieux évaluer mes compétences techniques
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Niveau Débutant -->
+                        <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-6 expertise-level border border-gray-300">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-2 bg-gray-400 rounded-full mx-auto mb-2"></div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Débutant</h3>
+                                <div class="text-sm text-gray-600 mb-3">0-25%</div>
+                            </div>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li class="flex items-start">
+                                    <span class="text-gray-500 mr-2">•</span>
+                                    Connaissances théoriques de base
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-500 mr-2">•</span>
+                                    Réalisation de tâches simples
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-500 mr-2">•</span>
+                                    Nécessite une supervision
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-500 mr-2">•</span>
+                                    Apprentissage en cours
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Niveau Intermédiaire -->
+                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 expertise-level border border-blue-200">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-2 bg-blue-400 rounded-full mx-auto mb-2"></div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Intermédiaire</h3>
+                                <div class="text-sm text-blue-600 mb-3">26-75%</div>
+                            </div>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li class="flex items-start">
+                                    <span class="text-blue-500 mr-2">•</span>
+                                    Maîtrise des concepts fondamentaux
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-500 mr-2">•</span>
+                                    Réalisation de projets autonomes
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-500 mr-2">•</span>
+                                    Résolution de problèmes courants
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-500 mr-2">•</span>
+                                    Expérience pratique significative
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Niveau Avancé -->
+                        <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 expertise-level border border-green-200">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-2 bg-green-500 rounded-full mx-auto mb-2"></div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Avancé</h3>
+                                <div class="text-sm text-green-600 mb-3">76-90%</div>
+                            </div>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span>
+                                    Expertise technique approfondie
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span>
+                                    Gestion de projets complexes
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span>
+                                    Résolution de problèmes avancés
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span>
+                                    Capacité de formation et mentorat
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Niveau Expert -->
+                        <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 expertise-level border border-purple-200">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-2 bg-purple-600 rounded-full mx-auto mb-2"></div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Expert</h3>
+                                <div class="text-sm text-purple-600 mb-3">91-100%</div>
+                            </div>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li class="flex items-start">
+                                    <span class="text-purple-500 mr-2">•</span>
+                                    Maîtrise exceptionnelle du domaine
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-purple-500 mr-2">•</span>
+                                    Innovation et leadership technique
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-purple-500 mr-2">•</span>
+                                    Résolution de problèmes critiques
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-purple-500 mr-2">•</span>
+                                    Référence et expertise reconnue
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-6 bg-blue-50 rounded-lg border border-blue-200">
+                        <h4 class="text-lg font-semibold text-blue-800 mb-3 text-center">📊 Comment lire les barres de progression</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-700">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-blue-600 rounded mr-3"></div>
+                                <span>La longueur de la barre indique le niveau de maîtrise</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-gray-200 rounded mr-3"></div>
+                                <span>L'espace restant montre le potentiel d'amélioration</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-blue-300 rounded mr-3"></div>
+                                <span>Basé sur l'expérience pratique et les réalisations</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-blue-500 rounded mr-3"></div>
+                                <span>Évalué selon des critères professionnels standards</span>
                             </div>
                         </div>
                     </div>
@@ -357,10 +563,10 @@
                         <div>
                             <div class="flex justify-between mb-2">
                                 <span class="font-semibold text-gray-700">Infrastructure & Virtualisation</span>
-                                <span class="font-semibold text-blue-600">Expert</span>
+                                <span class="font-semibold text-gray-600">Débutant</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="bg-blue-600 h-3 rounded-full progress-bar" style="width: 90%"></div>
+                                <div class="bg-gray-400 h-3 rounded-full progress-bar" style="width: 20%"></div>
                             </div>
                         </div>
                     </div>
@@ -487,7 +693,7 @@
                         <!-- Twitter -->
                         <a href="#" class="text-black hover:text-blue-400 transition duration-300 bg-white rounded-full p-2">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 a4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 a4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 a4.996 4.996 0 01-2.212.085 a4.936 4.936 0 004.604 3.417 a9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                             </svg>
                         </a>
                         <!-- LinkedIn -->
@@ -554,6 +760,37 @@
                 setTimeout(() => {
                     bar.style.width = width;
                 }, 500);
+            });
+
+            // Système de filtrage des compétences
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const skillCategories = document.querySelectorAll('.skill-category');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Retirer la classe active de tous les boutons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Ajouter la classe active au bouton cliqué
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filtrer les compétences
+                    skillCategories.forEach(category => {
+                        if (filterValue === 'all' || category.getAttribute('data-category') === filterValue) {
+                            category.classList.remove('hidden');
+                            setTimeout(() => {
+                                category.classList.add('visible');
+                            }, 10);
+                        } else {
+                            category.classList.remove('visible');
+                            setTimeout(() => {
+                                category.classList.add('hidden');
+                            }, 300);
+                        }
+                    });
+                });
             });
 
             // Gestion de la page active
