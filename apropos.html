@@ -556,86 +556,72 @@
 
     <!-- ========== SCRIPTS ========== -->
     <script>
-    // Script pour le menu mobile
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const closeIcon = document.getElementById('close-icon');
+        // Script pour le menu mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
 
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', function() {
-                // Basculer l'affichage du menu mobile
-                mobileMenu.classList.toggle('hidden');
-                
-                // Basculer les icônes menu/fermer
-                menuIcon.classList.toggle('hidden');
-                closeIcon.classList.toggle('hidden');
-            });
-
-            // Fermer le menu si on clique en dehors
-            document.addEventListener('click', function(event) {
-                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
-                    mobileMenu.classList.add('hidden');
-                    menuIcon.classList.remove('hidden');
-                    closeIcon.classList.add('hidden');
-                }
-            });
-
-            // Fermer le menu quand on clique sur un lien
-            const mobileLinks = mobileMenu.querySelectorAll('a');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    menuIcon.classList.remove('hidden');
-                    closeIcon.classList.add('hidden');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    // Basculer l'affichage du menu mobile
+                    mobileMenu.classList.toggle('hidden');
+                    
+                    // Basculer les icônes menu/fermer
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
                 });
-            });
-        }
 
-        // Gestion de la page active - Version corrigée
-        function setActivePage() {
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            const navLinks = document.querySelectorAll('nav a');
-            const footerLinks = document.querySelectorAll('footer .text-center a');
-            
-            // Navigation principale
-            navLinks.forEach(link => {
-                const linkPage = link.getAttribute('href');
-                if (linkPage === currentPage) {
-                    link.classList.add('active-page');
-                } else {
-                    link.classList.remove('active-page');
-                }
-            });
-            
-            // Navigation footer
-            footerLinks.forEach(link => {
-                const linkPage = link.getAttribute('href');
-                if (linkPage === currentPage) {
-                    link.classList.add('font-semibold');
-                } else {
-                    link.classList.remove('font-semibold');
-                }
-            });
-        }
+                // Fermer le menu si on clique en dehors
+                document.addEventListener('click', function(event) {
+                    if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                });
 
-        // Exécuter la détection de page active
-        setActivePage();
-    });
-
-    // Double sécurité - exécuter aussi après un court délai
-    setTimeout(function() {
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        const navLinks = document.querySelectorAll('nav a');
-        
-        navLinks.forEach(link => {
-            const linkPage = link.getAttribute('href');
-            if (linkPage === currentPage) {
-                link.classList.add('active-page');
+                // Fermer le menu quand on clique sur un lien
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    });
+                });
             }
+
+            // Gestion de la page active
+            function setActivePage() {
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                const navLinks = document.querySelectorAll('nav a');
+                const footerLinks = document.querySelectorAll('footer .text-center a');
+                
+                // Navigation principale
+                navLinks.forEach(link => {
+                    const linkPage = link.getAttribute('href');
+                    if (linkPage === currentPage) {
+                        link.classList.add('active-page');
+                    } else {
+                        link.classList.remove('active-page');
+                    }
+                });
+                
+                // Navigation footer
+                footerLinks.forEach(link => {
+                    const linkPage = link.getAttribute('href');
+                    if (linkPage === currentPage) {
+                        link.classList.add('font-semibold');
+                    } else {
+                        link.classList.remove('font-semibold');
+                    }
+                });
+            }
+
+            setActivePage();
         });
-    }, 50);
-</script>
+    </script>
 </body>
 </html>
