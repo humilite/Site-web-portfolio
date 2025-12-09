@@ -1,13 +1,45 @@
 <!doctype html>
 <html lang="fr">
 <head>
-    <!-- Dans la section <head> de ton index.html -->
-<meta name="description" content=" ntoutoume nguema jean emmanuel Informaticien Support Technique spécialisé en résolution d'incidents, maintenance système et infrastructure réseau. 3 ans d'expérience en support technique.">
-<meta name="keywords" content="support technique, informaticien, maintenance IT, réseau, Windows, Linux, assistance utilisateur">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- OPTIMISATION SEO -->
+    <title>Jean Emmanuel NTOUTOUME NGUEMA | Informaticien Support Technique Gabon </title>
+    
+    <meta name="description" content="Jean Emmanuel NTOUTOUME NGUEMA, Informaticien Support Technique au Gabon. Spécialiste maintenance système Windows/Linux, infrastructure réseau, support utilisateur. 3 ans d'expérience. Contact: +241 74 23 79 48">
+    
+    <meta name="keywords" content="support technique Gabon, informaticien Libreville, maintenance IT, réseau informatique, Windows Linux, assistance utilisateur, IT support Gabon, informaticien support, technicien informatique Gabon, support technique niveau 1 niveau 2, maintenance système, infrastructure réseau">
+    
+    <meta name="author" content="Jean Emmanuel NTOUTOUME NGUEMA">
+    <meta name="geo.region" content="GA">
+    <meta name="geo.placename" content="Libreville">
+    <meta name="geo.position" content="0.4162;9.4673">
+    <meta name="ICBM" content="0.4162, 9.4673">
+    
+    <!-- Open Graph pour LinkedIn/Facebook -->
+    <meta property="og:title" content="Jean Emmanuel NTOUTOUME NGUEMA | Informaticien Support Technique">
+    <meta property="og:description" content="Spécialiste support informatique avec 3 ans d'expérience au Gabon">
+    <meta property="og:image" content="https://site-web-portfolio.pages.dev/images/_EPE2944.jpg">
+    <meta property="og:url" content="https://site-web-portfolio.pages.dev/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Portfolio Support Technique">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jean Emmanuel - Informaticien Support Technique Gabon">
+    <meta name="twitter:description" content="Expert en support IT, maintenance système et réseau au Gabon">
+    <meta name="twitter:image" content="https://site-web-portfolio.pages.dev/images/_EPE2944.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://site-web-portfolio.pages.dev/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Jean Emmanuel - Informaticien Support Technique</title>
+    
     <style>
         .hero-background {
             background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
@@ -28,16 +60,51 @@
             border-radius: 0.375rem;
             font-weight: 600;
         }
+        
+        /* Amélioration SEO pour les liens */
+        .seo-text a {
+            color: #1d4ed8;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        
+        .seo-text a:hover {
+            color: #1e40af;
+        }
     </style>
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jean Emmanuel NTOUTOUME NGUEMA",
+        "jobTitle": "Informaticien Support Technique",
+        "url": "https://site-web-portfolio.pages.dev/",
+        "sameAs": [
+            "https://www.linkedin.com/in/emmanuel-ntoutoume-9b9149122",
+            "https://x.com/EmmanuelNTOUTO1"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GA",
+            "addressRegion": "Libreville"
+        },
+        "email": "mailto:emmanuelnguema02@gmail.com",
+        "telephone": "+241-74-23-79-48",
+        "description": "Informaticien Support Technique spécialisé en résolution d'incidents, maintenance système et infrastructure réseau avec 3 ans d'expérience au Gabon.",
+        "knowsAbout": ["Support Technique", "Maintenance IT", "Réseau Informatique", "Windows", "Linux", "SysAid", "DNS", "DHCP", "VPN"]
+    }
+    </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50" itemscope itemtype="https://schema.org/WebPage">
     <!-- ========== NAVIGATION ========== -->
-    <nav class="bg-sky-600 h-14 relative">
+    <nav class="bg-sky-600 h-14 relative" role="navigation" aria-label="Menu principal">
         <div class="max-w-7xl mx-auto h-full flex items-center justify-between px-6">
             <!-- Logo et titre -->
             <div class="flex items-center h-full">
                 <div class="h-14 w-14 rounded-full bg-gray-300 overflow-hidden">
-                    <img src="images/_EPE2245.jpg" alt="Logo Support Technique" class="w-full h-full object-cover">
+                    <img src="images/_EPE2245.jpg" alt="Logo Support Technique - Jean Emmanuel" class="w-full h-full object-cover">
                 </div>
                 <!-- Titre logo -->
                 <div class="ml-3 flex flex-col items-start">
@@ -58,7 +125,7 @@
 
             <!-- Bouton Menu mobile -->
             <div class="md:hidden mr-4">
-                <button id="mobile-menu-button" class="text-white">
+                <button id="mobile-menu-button" class="text-white" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
                     <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -70,20 +137,20 @@
         </div>
 
         <!-- Menu Mobile (caché par défaut) -->
-        <div id="mobile-menu" class="md:hidden hidden absolute top-14 left-0 w-full bg-sky-700 shadow-lg">
+        <div id="mobile-menu" class="md:hidden hidden absolute top-14 left-0 w-full bg-sky-700 shadow-lg" role="menu">
             <div class="flex flex-col py-4">
-                <a href="index.html" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6 active-page">Accueil</a>
-                <a href="apropos.html" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6">À propos</a>
-                <a href="experience.html" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6">Expérience</a>
-                <a href="competences.html" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6">Compétences</a>
-                <a href="portfolio.html" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6">Portfolio</a>
-                <a href="contact.html" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6">Contact</a>
+                <a href="index.html" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6 active-page" role="menuitem">Accueil</a>
+                <a href="apropos.html" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6" role="menuitem">À propos</a>
+                <a href="experience.html" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6" role="menuitem">Expérience</a>
+                <a href="competences.html" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6" role="menuitem">Compétences</a>
+                <a href="portfolio.html" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6" role="menuitem">Portfolio</a>
+                <a href="contact.html" class="text-white hover:bg-sky-600 transition duration-300 font-medium py-3 px-6" role="menuitem">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- ========== HEADER ========== -->
-    <header class="hero-background py-16 px-6 min-h-screen flex items-center">
+    <header class="hero-background py-16 px-6 min-h-screen flex items-center" role="banner">
         <div class="max-w-6xl mx-auto w-full">
             <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
                 
@@ -92,9 +159,10 @@
                     <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                         <img 
                             src="images/_EPE2944.jpg" 
-                            alt="NTOUTOUME NGUEMA Jean Emmanuel - Informaticien Support Technique"
+                            alt="NTOUTOUME NGUEMA Jean Emmanuel - Informaticien Support Technique au Gabon"
                             class="w-full h-full object-cover"
                             onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'"
+                            itemprop="image"
                         >
                     </div>
                 </div>
@@ -103,11 +171,11 @@
                 <div class="flex-1 text-center lg:text-left">
                     <!-- Nom et titre -->
                     <div class="mb-8">
-                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 leading-tight">
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 leading-tight" itemprop="name">
                             NTOUTOUME NGUEMA<br>Jean Emmanuel,
                         </h1>
                         <h2 class="text-xl md:text-2xl font-semibold text-blue-600 mb-3">
-                            Informaticien Support Technique
+                            <span itemprop="jobTitle">Informaticien Support Technique</span>
                         </h2>
                         <p class="text-lg text-gray-600 font-medium bg-white/80 px-4 py-2 rounded-full inline-block">
                             N°PNPE: D20157-2023-G1
@@ -119,8 +187,8 @@
 
                     <!-- Description -->
                     <div class="mb-10">
-                        <p class="text-xl text-gray-700 leading-relaxed max-w-3xl">
-                            Spécialiste du support informatique avec 3 ans d'expérience en support de proximité (niveaux 1 et 2). 
+                        <p class="text-xl text-gray-700 leading-relaxed max-w-3xl" itemprop="description">
+                            Spécialiste du support informatique avec 3 ans d'expérience en support de proximité (niveaux 1 et 2) au <strong>Gabon</strong>. 
                             Garant de la résolution des incidents et de la continuité opérationnelle pour les utilisateurs.
                         </p>
                     </div>
@@ -140,7 +208,7 @@
     </header>
 
     <!-- ========== CONTENU PRINCIPAL ========== -->
-    <main>
+    <main role="main">
         <!-- Section Services -->
         <section class="py-16 px-6">
             <div class="max-w-6xl mx-auto">
@@ -148,10 +216,10 @@
                 <!-- Titre principal -->
                 <div class="text-center mb-16">
                     <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        À votre service pour vos besoins IT
+                        À votre service pour vos besoins IT au Gabon
                     </h1>
                     <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                        Passionné par les technologies de l'information, je mets mon expertise au service de la résolution de problèmes techniques et de l'optimisation des systèmes informatiques.
+                        Passionné par les technologies de l'information, je mets mon expertise au service de la résolution de problèmes techniques et de l'optimisation des systèmes informatiques pour les entreprises gabonaises.
                     </p>
                 </div>
 
@@ -170,7 +238,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">Support Technique</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            Assistance utilisateur et résolution de tickets via SysAid, formation et documentation.
+                            Assistance utilisateur et résolution de tickets via SysAid, formation et documentation technique.
                         </p>
                     </div>
 
@@ -262,7 +330,7 @@
     </main>
 
     <!-- ========== FOOTER ========== -->
-    <footer class="bg-sky-200 w-full py-8">
+    <footer class="bg-sky-200 w-full py-8" role="contentinfo">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
@@ -271,14 +339,14 @@
                     <h3 class="text-lg font-bold mb-4">Contact</h3>
                     <div class="flex flex-col space-y-3">
                         <!-- Email -->
-                        <a href="mailto:emmanuelnguema02@gmail.com" class="text-black hover:text-sky-700 transition duration-300 text-base flex items-center justify-center md:justify-start">
+                        <a href="mailto:emmanuelnguema02@gmail.com" class="text-black hover:text-sky-700 transition duration-300 text-base flex items-center justify-center md:justify-start" itemprop="email">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                             </svg>
                             emmanuelnguema02@gmail.com
                         </a>
                         <!-- Téléphone 1 -->
-                        <a href="tel:+24174237948" class="text-black hover:text-sky-700 transition duration-300 text-base flex items-center justify-center md:justify-start">
+                        <a href="tel:+24174237948" class="text-black hover:text-sky-700 transition duration-300 text-base flex items-center justify-center md:justify-start" itemprop="telephone">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                             </svg>
@@ -312,25 +380,25 @@
                     <h3 class="text-lg font-bold mb-4 mr-10">Réseaux sociaux</h3>
                     <div class="flex justify-center md:justify-end space-x-4">
                         <!-- WhatsApp -->
-                        <a href="https://wa.me/24104237948" class="text-black hover:text-green-600 transition duration-300 bg-white rounded-full p-2">
+                        <a href="https://wa.me/24104237948" class="text-black hover:text-green-600 transition duration-300 bg-white rounded-full p-2" aria-label="Contact WhatsApp">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893c0-3.18-1.24-6.169-3.495-8.418"/>
                             </svg>
                         </a>
                         <!-- Facebook -->
-                        <a href="#" class="text-black hover:text-blue-600 transition duration-300 bg-white rounded-full p-2">
+                        <a href="#" class="text-black hover:text-blue-600 transition duration-300 bg-white rounded-full p-2" aria-label="Page Facebook">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                             </svg>
                         </a>
                         <!-- Twitter -->
-                        <a href="https://x.com/EmmanuelNTOUTO1?t=4K3wp27-R3VjfMJ2TqLEhQ&s=08" class="text-black hover:text-blue-400 transition duration-300 bg-white rounded-full p-2">
+                        <a href="https://x.com/EmmanuelNTOUTO1?t=4K3wp27-R3VjfMJ2TqLEhQ&s=08" class="text-black hover:text-blue-400 transition duration-300 bg-white rounded-full p-2" aria-label="Compte Twitter">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                             </svg>
                         </a>
                         <!-- LinkedIn -->
-                        <a href="https://www.linkedin.com/in/emmanuel-ntoutoume-9b9149122" class="text-black hover:text-blue-700 transition duration-300 bg-white rounded-full p-2">
+                        <a href="https://www.linkedin.com/in/emmanuel-ntoutoume-9b9149122" class="text-black hover:text-blue-700 transition duration-300 bg-white rounded-full p-2" aria-label="Profil LinkedIn">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
@@ -341,7 +409,7 @@
 
             <!-- Copyright -->
             <div class="mt-8 pt-6 border-t border-sky-300 text-center text-black text-sm">
-                <p>&copy; 2025 Informaticien support technique. Tous droits réservés</p>
+                <p>&copy; 2025 Jean Emmanuel NTOUTOUME NGUEMA - Informaticien Support Technique Gabon. Tous droits réservés</p>
             </div>
         </div>
     </footer>
@@ -357,12 +425,17 @@
 
             if (mobileMenuButton && mobileMenu) {
                 mobileMenuButton.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    
                     // Basculer l'affichage du menu mobile
                     mobileMenu.classList.toggle('hidden');
                     
                     // Basculer les icônes menu/fermer
                     menuIcon.classList.toggle('hidden');
                     closeIcon.classList.toggle('hidden');
+                    
+                    // Mettre à jour aria-expanded
+                    this.setAttribute('aria-expanded', !isExpanded);
                 });
 
                 // Fermer le menu si on clique en dehors
@@ -371,6 +444,7 @@
                         mobileMenu.classList.add('hidden');
                         menuIcon.classList.remove('hidden');
                         closeIcon.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
                     }
                 });
 
@@ -381,6 +455,7 @@
                         mobileMenu.classList.add('hidden');
                         menuIcon.classList.remove('hidden');
                         closeIcon.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
                     });
                 });
             }
