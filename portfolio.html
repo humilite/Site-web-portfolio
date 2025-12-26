@@ -88,6 +88,15 @@
         .download-btn:hover {
             background: linear-gradient(135deg, #059669 0%, #047857 100%);
         }
+        
+        .caregfa-badge {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -294,6 +303,142 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Projet CareGFA - Gestion de files d'attente -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-10 project-card mt-12">
+                    <div class="md:flex">
+                        <!-- Section Carrousel -->
+                        <div class="md:w-2/5 p-0">
+                            <div class="ged-carousel glide glide-caregfa">
+                                <div class="glide__track" data-glide-el="track">
+                                    <div class="glide__slides">
+                                        <!-- Slide 1 - Tableau de bord -->
+                                        <div class="glide__slide ged-carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                                            <div class="ged-carousel-overlay">
+                                                <h3 class="text-2xl font-bold mb-2">Tableau de Bord</h3>
+                                                <p class="text-lg">Suivi en temps réel des files d'attente</p>
+                                            </div>
+                                        </div>
+                                        <!-- Slide 2 - Planification -->
+                                        <div class="glide__slide ged-carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80');">
+                                            <div class="ged-carousel-overlay">
+                                                <h3 class="text-xl font-bold mb-2">Planification</h3>
+                                                <p>Calendrier de déploiement et coordination</p>
+                                            </div>
+                                        </div>
+                                        <!-- Slide 3 - Formation -->
+                                        <div class="glide__slide ged-carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                                            <div class="ged-carousel-overlay">
+                                                <h3 class="text-xl font-bold mb-2">Formation Utilisateurs</h3>
+                                                <p>Accompagnement et transfert de compétences</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Bullets de navigation -->
+                                <div class="glide__bullets" data-glide-el="controls[nav]">
+                                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Détails du projet -->
+                        <div class="md:w-3/5 p-8">
+                            <div class="mb-6">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Projet CareGFA - Optimisation des Files d'Attente</h3>
+                                <h4 class="text-xl font-semibold text-gray-900 mb-3">Contexte & Mission</h4>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Face à des temps d'attente élevés dans les agences, impactant la satisfaction client, le projet CareGFA a été lancé pour déployer un système de gestion de file d'attente, permettant un suivi en temps réel et une répartition optimale des flux.
+                                </p>
+                                <p class="text-gray-700 leading-relaxed mt-2">
+                                    <strong>Mission principale :</strong> Assurer le suivi opérationnel du déploiement physique et logiciel de la solution CareGFA dans les agences cibles, et garantir son appropriation par les équipes via un accompagnement ciblé.
+                                </p>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-xl font-semibold text-gray-900 mb-3">Actions menées</h4>
+                                <ul class="text-gray-700 space-y-2">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span><strong>Planification :</strong> Élaboration et suivi du calendrier de déploiement par agence, coordination des interventions des techniciens.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span><strong>Suivi opérationnel :</strong> Monitoring en temps réel des installations et remontée proactive des blocages techniques.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span><strong>Formation & accompagnement :</strong> Animation de sessions de formation utilisateurs et vérification de la bonne prise en main des outils.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span><strong>Recueil de retours :</strong> Collecte des premiers retours des équipes pour ajustements et amélioration continue.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-xl font-semibold text-gray-900 mb-3">Compétences mobilisées</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="caregfa-badge">Gestion de Projet</span>
+                                    <span class="caregfa-badge">Coordination Technique</span>
+                                    <span class="caregfa-badge">Support Utilisateur</span>
+                                    <span class="caregfa-badge">Formation</span>
+                                    <span class="caregfa-badge">Suivi Opérationnel</span>
+                                    <span class="caregfa-badge">Relationnel</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-xl font-semibold text-gray-900 mb-3">Résultats obtenus</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                    <div class="bg-green-50 rounded-lg p-3 border border-green-100">
+                                        <span class="font-medium text-gray-800">✅ Déploiement réussi</span>
+                                        <p class="text-sm text-gray-600 mt-1">Réalisé dans les agences cibles selon le calendrier initial</p>
+                                    </div>
+                                    <div class="bg-green-50 rounded-lg p-3 border border-green-100">
+                                        <span class="font-medium text-gray-800">✅ Équipes autonomes</span>
+                                        <p class="text-sm text-gray-600 mt-1">Formation complète garantissant l'appropriation du système</p>
+                                    </div>
+                                    <div class="bg-green-50 rounded-lg p-3 border border-green-100">
+                                        <span class="font-medium text-gray-800">✅ Satisfaction client</span>
+                                        <p class="text-sm text-gray-600 mt-1">Réduction des temps d'attente et amélioration de l'expérience</p>
+                                    </div>
+                                    <div class="bg-green-50 rounded-lg p-3 border border-green-100">
+                                        <span class="font-medium text-gray-800">✅ Support efficace</span>
+                                        <p class="text-sm text-gray-600 mt-1">Mécanisme de suivi et d'ajustement post-déploiement</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-4">
+                                <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg">
+                                    Discuter du projet
+                                </a>
+                                <!-- Bouton pour un éventuel rapport ou fiche projet -->
+                                <!--
+                                <a href="document/fiche_projet_caregfa.pdf" download class="download-btn text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                    </svg>
+                                    Fiche projet (PDF)
+                                </a>
+                                -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin du projet CareGFA -->
             </section>
 
             <!-- Section Projets à Venir -->
@@ -568,12 +713,30 @@
 
             setActivePage();
             
-            // Initialisation du carrousel Glide.js
+            // Initialisation des carrousels Glide.js
+            // Carrousel pour le projet GED (celui avec la classe .glide par défaut)
             new Glide('.glide', {
                 type: 'carousel',
                 startAt: 0,
                 perView: 1,
                 autoplay: 3000,
+                hoverpause: true,
+                animationDuration: 800,
+                gap: 0,
+                rewind: true,
+                breakpoints: {
+                    768: {
+                        perView: 1
+                    }
+                }
+            }).mount();
+
+            // Carrousel pour le projet CareGFA (celui avec la classe .glide-caregfa)
+            new Glide('.glide-caregfa', {
+                type: 'carousel',
+                startAt: 0,
+                perView: 1,
+                autoplay: 3500, // Légère différence d'intervalle
                 hoverpause: true,
                 animationDuration: 800,
                 gap: 0,
